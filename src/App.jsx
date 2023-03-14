@@ -119,7 +119,7 @@ function stateFiller(item){
         <form onSubmit={addItem}>
          <h2 id="formTitle">{id ? "Editar" : "Cadastrar"} Tarefa</h2>
 
-         <input type="text" value={title} placeholder='Título' maxLength={30}  onChange={(event) => setTitle(event.target.value)}/>
+         <input type="text" value={title} placeholder='Título' maxLength={40}  onChange={(event) => setTitle(event.target.value)}/>
          <small id='validateTitle'>{validateTitle}</small>
 
         <select name="categorias"   value={category}  id="cat" onChange={(event)=>setCategory(event.target.value)}>
