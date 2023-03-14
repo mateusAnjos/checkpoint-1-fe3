@@ -86,10 +86,6 @@ setCategory("");
 setDate("");
 setDescription("");
 
-setValidateCategory('');
-setValidateDate('');
-setValidateDescription('');
-
 }
 
 
