@@ -70,10 +70,10 @@ function addItem(event){
     setTaskList([...taskList, 
       {
         id: Date.now(),
-        title: title,
-        category: category,
-        date: date,
-        description: description,    
+        title,
+        category,
+        date,
+        description,    
       },
     ]);
   }
