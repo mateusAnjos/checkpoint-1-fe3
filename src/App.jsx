@@ -21,9 +21,8 @@ function App() {
 function addItem(event){
   event.preventDefault();
   
-  if(validate()){
-    return
-  }
+  if(validate()) return
+  
 
   function validate(){
     let validado = false;
@@ -145,7 +144,7 @@ function stateFiller(item){
       <div className='boxTarefas'>
         <header>
           <h1>Minhas Tarefas</h1>
-          <p>total: {taskList.length} tarefas</p>
+          <p>Total: {taskList.length} tarefas</p>
         </header>
         
         {taskList.length > 0 ?(
