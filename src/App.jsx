@@ -91,8 +91,8 @@ setDescription("");
 
 function deleteItem(id){
   if(confirm("Deseja realmente apagar esse card?")) {
-    const result = taskList.filter((item)=>item.id !== id);
-    setTaskList(result);
+      const result = taskList.filter((item)=>item.id !== id);
+      setTaskList(result);
   }
 }
 
@@ -106,7 +106,7 @@ function stateFiller(item){
 
 
 
-  
+
   return (
     
     <div className="container">
@@ -145,25 +145,25 @@ function stateFiller(item){
         
         {taskList.length > 0 ?(
           <ul>
-          {taskList.map((item, index) => (
-            <li key={index}>
-              <div className='card'>
-                <div className='cardLeft'>
-                  <h2 className='cardTitle'>{item.title}</h2>
-                  <h3 className='cardCategory'>{item.category}</h3>
-                  <p className='cardDescription'>{item.description}</p>
-                </div>
-             
-            
-              <div className='cardRight'>
-                <p className='cardDate'> {item.date.split('-').reverse().join('/')} </p>
-                <div className="btns">
-                  <button className='editBtn'onClick={() => stateFiller(item)}></button>
-                  <button className='deleteBtn' onClick={() => deleteItem(item.id)}></button>
-                </div>
+          {taskList.map((item) => (
+            <li key={item.id}>
+            <div className='card'>
+              <div className='cardLeft'>
+                <h2 className='cardTitle'>{item.title}</h2>
+                <h3 className='cardCategory'>{item.category}</h3>
+                <p className='cardDescription'>{item.description}</p>
               </div>
+           
+          
+            <div className='cardRight'>
+              <p className='cardDate'> {item.date.split('-').reverse().join('/')} </p>
+              <div className="btns">
+                <button className='editBtn'onClick={() => stateFiller(item)}></button>
+                <button className='deleteBtn' onClick={() => deleteItem(item.id)}></button>
               </div>
-            </li>
+            </div>
+            </div>
+          </li>
           ))}
           </ul>
         ) : (
